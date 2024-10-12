@@ -7,7 +7,63 @@
   <div class="site-container">
     @include('partials/header.html')
     <main class="main">
-      
+      <div class="profile">
+        <div class="container">
+          <div class="page-header">
+            <form action="#" class="search">
+              <div class="fieldset">
+                <input type="text" class="field field--search" placeholder="Поиск">
+                <span class="icon">
+                  <svg>
+                    <use xlink:href="img/icons/search.svg#svg-search"></use>
+                  </svg>
+                </span>
+              </div>
+            </form>
+
+            <nav class="profile-nav">
+              <a href="#" class="btn profile-nav-link">
+                <span class="icon">
+                  <svg>
+                    <use xlink:href="img/icons/user.svg#svg-user"></use>
+                  </svg>
+                </span>
+              </a>
+              <a href="#" class="btn profile-nav-link">
+                <span class="icon">
+                  <svg>
+                    <use xlink:href="img/icons/notify.svg#svg-notify"></use>
+                  </svg>
+                </span>
+              </a>
+            </nav>
+          </div>
+
+          <div class="profile-main">
+            <div class="profile-main-start">
+              <div class="profile-balance">
+                <span>
+                  Мой баланс:
+                </span>
+                <span class="profile-balance-value">
+                  20 000₽
+                </span>
+              </div>
+              <a href="#" class="btn btn-base btn-outline-light">
+                <span class="icon">
+                  <svg>
+                    <use xlink:href="img/icons/wallet.svg#svg-wallet"></use>
+                  </svg>
+                </span>
+                <span>
+                  Пополнить
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </main>
     @include('partials/footer.html')
   </div>

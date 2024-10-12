@@ -1,21 +1,25 @@
+.fieldset {
+	position: relative;
+}
+
 .field {
 	--_field-width: 100%;
 	--_field-height: 2.5rem;
-	--_field-fs: var(--fs);
+	--_field-fs: var(--fs-base);
 	--_field-fw: 400;
-	--_field-lh: var(--lh-1);
+	--_field-lh: var(--lh-base);
 	--_field-color: var(--text-color);
-	--_field-bg: transparent;
-	--_field-border: .0625rem solid #333;
-	--_field-radius: .5rem;
-	--_field-padding: .25rem 1.25rem;
+	--_field-bg: rgba(var(--primary-100-rgb), .375);
+	--_field-border: none;
+	--_field-radius: 1.5rem;
+	--_field-padding: .5rem 1.25rem .5rem 2.5rem;
 	--_field-duration: var(--transition-duration);
 	--_field-type: var(--transition-type);
 
-	--_field-p-fs: var(--fs);
-	--_field-p-fw: 400;
-	--_field-p-lh: var(--lh-1);
-	--_field-p-color: var(--text-color);
+	--_field-p-fs: var(--_field-fs);
+	--_field-p-fw: var(--_field-fw);
+	--_field-p-lh: var(--_field-lh);
+	--_field-p-color: var(--_field-color);
 
 	width: var(--_field-width);
 	height: var(--_field-height);
@@ -37,5 +41,30 @@
 		font-weight: var(--_field-p-fw);
 		line-height: var(--_field-p-lh);
 		color: var(--_field-p-color);
+	}
+
+	&:focus-visible {
+
+		&::placeholder {
+			--_field-p-color: transparent;
+
+			opacity: 0;
+			visibility: hidden;
+		}
+	}
+}
+
+.field--search {
+	
+
+	~ .icon {
+		--_i-size: 1.25rem;
+
+		pointer-events: none;
+		user-select: none;
+		position: absolute;
+		left: 1rem;
+		top: 50%;
+		transform: translateY(-50%);
 	}
 }

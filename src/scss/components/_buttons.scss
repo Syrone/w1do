@@ -1,7 +1,7 @@
 .btn {
 	--_width: max-content;
 	--_height: auto;
-	--_font-size: 1rem;
+	--_font-size: var(--fs-base);
 	--_font-weight: 400;
 	--_line-height: normal;
 	--_color: var(--text-color);
@@ -38,7 +38,9 @@
 	border: var(--_border);
 	border-radius: var(--_border-radius);
 	padding: var(--_padding-y) var(--_padding-x);
-	transition: color var(--_transition-duration) var(--_transition-type), background var(--_transition-duration) var(--_transition-type), border var(--_transition-duration) var(--_transition-type), transform var(--_transition-duration) var(--_transition-type);
+	transition-property: color, background, border, transform;
+	transition-duration: var(--_transition-duration);
+	transition-timing-function: var(--_transition-type);
 	cursor: pointer;
 	outline: none;
 
@@ -49,10 +51,11 @@
 		flex-shrink: 0;
 	}
 
-	&:is(:focus-visible, :active, .is-active, .mixitup-control-active) {
+	&:is(:focus-visible, :active, .is-active) {
 		color: var(--_color-active);
 		background-color: var(--_background-color-active);
 		border-color: var(--_border-color-active);
+		transform: scale(.875);
 
 		.icon {
 			color: var(--_icon-color-active);
@@ -66,6 +69,23 @@
 	--_font-weight: inherit;
 	--_line-height: inherit;
 	--_color: inherit;
+}
+
+.btn-outline-light {
+	--_color: var(--light-color);
+	--_border: 1px solid var(--light-color);
+
+	--_color-active: var(--light-color);
+	--_border-color-active: var(--light-color);
+}
+
+.btn-base {
+	--_height: 2.5rem;
+	--_font-size: var(--fs-base);
+	
+	--_border-radius: 1.5rem;
+	--_padding-y: .5rem;
+	--_padding-x: 1rem;
 }
 
 .btn-sm {

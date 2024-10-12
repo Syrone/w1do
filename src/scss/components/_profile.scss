@@ -1,0 +1,42 @@
+.profile {
+	padding-bottom: 2rem;
+	background-image: 
+		url('../img/backgrounds/profile-bg.webp'),
+		var(--body-gradient);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top center;
+
+	&-nav {
+		display: flex;
+		align-items: center;
+		gap: .75rem;
+
+		&-link {
+			--_icon-size: 1.5rem;
+		}
+	}
+
+	&-main {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 1rem;
+
+		&-start {
+			display: grid;
+			align-items: flex-start;
+			gap: .5rem;
+		}
+	}
+
+	&-balance {
+		display: grid;
+		align-items: flex-start;
+
+		&-value {
+			font-size: var(--h1);
+			font-weight: 700;
+		}
+	}
+}

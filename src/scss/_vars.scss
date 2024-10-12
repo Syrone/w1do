@@ -39,6 +39,7 @@
   --primary-800: #061DA0;
   --primary-900: #000C55;
   --text-color: #fff;
+  --light-color: #fff;
 
   // colors rgb
   --primary-rgb: 48, 79, 255;
@@ -52,13 +53,13 @@
   --primary-800-rgb: 6, 29, 160;
   --primary-900-rgb: 0, 12, 85;
   --text-color-rgb: 255, 255, 255;
+  --light-color-rgb: 255, 255, 255;
 
   // backgrounds
   --body-bg: #121212;
   --body-gradient: linear-gradient(140deg, var(--primary) 0%, var(--primary-900) 100%);
-  --banner-gradient: linear-gradient(180deg, #152896 0%, #263dc0 100%);
-  --block-gradient: linear-gradient(90deg, rgba(113, 204, 255, 0.4) 0%, rgba(0, 163, 255, 0.4) 100%);
-  --mini-block-gradient: linear-gradient(90deg, rgba(113, 204, 255, 0.4) 0%, rgba(0, 163, 255, 0.4) 100%);
+  --banner-gradient: linear-gradient(180deg, var(--primary-700) 0%, var(--primary-600) 100%);
+  --block-gradient: linear-gradient(90deg, rgba(var(--primary-100-rgb), 0.4) 0%, rgba(var(--primary-300-rgb), 0.4) 100%);
 
   // transition
   --transition-duration: 200ms;

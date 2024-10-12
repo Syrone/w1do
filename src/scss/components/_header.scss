@@ -13,6 +13,7 @@
 		object-fit: contain;
 		pointer-events: none;
 		user-select: none;
+		filter: drop-shadow(0 -.25rem .25rem rgba(0, 0, 0, .5));
 		position: absolute;
 		bottom: 0;
 		left: -570px;
@@ -36,7 +37,6 @@
 			flex-direction: column;
 			gap: 0;
 			transform: initial;
-			transition-property: transform, background, color, border;
 
 			.text {
 				margin-bottom: -1em;
