@@ -29,6 +29,7 @@
 
   // colors hex
   --primary: #304fff;
+  --primary-25: #9BA9FF;
   --primary-50: #99C2FF;
   --primary-100: #71CCFF;
   --primary-200: #51ABFF;
@@ -45,8 +46,11 @@
 
   // colors rgb
   --primary-rgb: 48, 79, 255;
+  --primary-25-rgb: 155, 169, 255;
+  --primary-50-rgb: 153, 194, 255;
   --primary-100-rgb: 113, 204, 255;
   --primary-200-rgb: 81, 171, 255;
+  --primary-250-rgb: 102, 164, 255;
   --primary-300-rgb: 0, 163, 255;
   --primary-400-rgb: 0, 71, 255;
   --primary-500-rgb: 64, 0, 248;
@@ -62,6 +66,7 @@
   --body-gradient: linear-gradient(140deg, var(--primary) 0%, var(--primary-900) 100%);
   --banner-gradient: linear-gradient(180deg, var(--primary-700) 0%, var(--primary-600) 100%);
   --block-gradient: linear-gradient(90deg, rgba(var(--primary-100-rgb), 0.4) 0%, rgba(var(--primary-300-rgb), 0.4) 100%);
+  --block2-gradient: linear-gradient(90deg, rgba(var(--primary-100-rgb), 0.4) 0%, rgba(var(--primary-400-rgb), 0.4) 100%);
 
   // transition
   --transition-duration: 200ms;

@@ -1,0 +1,115 @@
+.steps {
+
+	&-swiper {
+
+		.swiper-slide {
+			padding-top: 2.125rem;
+			position: relative;
+
+			&:not(:last-child) {
+				&::after {
+					content: '';
+					height: 2px;
+					display: block;
+					background-color: var(--primary-25);
+					pointer-events: none;
+					user-select: none;
+					top: 1rem;
+					left: 0;
+					right: -1rem;
+					position: absolute;
+				}
+			}
+
+			&:first-child {
+
+				&::after {
+					left: .75rem;
+				}
+			}
+		}
+
+		&-point {
+			width: .75rem;
+			height: .75rem;
+			background-color: var(--primary-25);
+			top: .6875rem;
+			left: .5rem;
+
+			&,
+			&::after {
+				display: block;
+				border-radius: 50%;
+				pointer-events: none;
+				user-select: none;
+				position: absolute;
+			}
+
+			&::after {
+				content: '';
+				width: 1.75rem;
+				height: 1.75rem;
+				background-color: rgba(var(--primary-25-rgb), .25);
+				filter: blur(.25rem);
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+		}
+	}
+
+	&-card {
+		width: 10rem;
+		height: 100%;
+		min-height: 4.625rem;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 1rem;
+		background-image: var(--block2-gradient);
+		padding: .875rem .25rem .25rem .75rem;
+		clip-path: polygon( 0% 22.725%,0% 22.725%,0.055% 21.231%,0.215% 19.814%,0.47% 18.492%,0.812% 17.285%,1.232% 16.212%,1.723% 15.291%,2.274% 14.542%,2.878% 13.983%,3.525% 13.634%,4.208% 13.514%,4.208% 13.514%,4.592% 13.475%,4.97% 13.361%,5.34% 13.174%,5.699% 12.916%,6.045% 12.589%,6.377% 12.196%,6.691% 11.738%,6.987% 11.218%,7.262% 10.638%,7.514% 10.001%,11.111% 0%,22.484% 12.146%,22.484% 12.146%,22.74% 12.403%,23% 12.633%,23.263% 12.838%,23.531% 13.016%,23.802% 13.167%,24.076% 13.291%,24.352% 13.388%,24.63% 13.458%,24.91% 13.5%,25.191% 13.514%,50% 13.514%,93.827% 13.514%,93.827% 13.514%,94.828% 13.69%,95.778% 14.202%,96.664% 15.022%,97.473% 16.121%,98.192% 17.472%,98.809% 19.046%,99.311% 20.817%,99.685% 22.756%,99.919% 24.835%,100% 27.027%,100% 86.486%,100% 86.486%,99.919% 88.678%,99.685% 90.758%,99.311% 92.697%,98.809% 94.467%,98.192% 96.042%,97.473% 97.393%,96.664% 98.492%,95.778% 99.311%,94.828% 99.823%,93.827% 100%,6.173% 100%,6.173% 100%,5.172% 99.823%,4.222% 99.311%,3.336% 98.492%,2.527% 97.393%,1.808% 96.042%,1.191% 94.467%,0.689% 92.697%,0.315% 90.758%,0.081% 88.678%,0% 86.486%,0% 22.725% );
+		
+		&-title,
+		&-subtitle {
+			white-space: nowrap;
+			position: absolute;
+			left: 1.75rem;
+		}
+
+		&-title {
+			font-size: var(--fs-2);
+			font-weight: 500;
+			top: 0;
+		}
+
+		&-subtitle {
+			font-size: .625rem;
+			color: var(--primary-50);
+			top: 1.25rem;
+		}
+
+		&-gift {
+
+			&-value {
+				font-size: var(--fs-6);
+				font-weight: 700;
+			}
+
+			&-hint {
+				font-size: .625rem;
+				font-weight: 500;
+			}
+		}
+
+		&-checkbox {
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-image: var(--block2-gradient);
+			border-radius: .75rem;
+			padding: .5rem;
+		}
+	}
+}
