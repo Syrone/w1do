@@ -1,0 +1,52 @@
+.progress {
+	--progress-size: 4.375rem;
+	--progress-circle: .875rem;
+
+	width: var(--progress-size);
+	height: var(--progress-size);
+	border-radius: 50%;
+	position: relative;
+
+	svg {
+		width: var(--progress-size);
+		height: var(--progress-size);
+		display: block;
+		object-fit: contain;
+		transform: rotate(-90deg);
+	}
+
+	circle {
+		cx: calc(var(--progress-size) / 2 - var(--progress-circle) / 2);
+		cy: calc(var(--progress-size) / 2 - var(--progress-circle) / 2);
+		r: calc(var(--progress-size) / 2 - var(--progress-circle) / 2);
+		fill: none;
+		stroke: var(--primary-200);
+		stroke-width: var(--progress-circle);
+		stroke-dashoffset: calc(2 * 3.1415 * (var(--progress-size) / 2 - var(--progress-circle) / 2));
+		stroke-dasharray: calc(2 * 3.1415 * (var(--progress-size) / 2 - var(--progress-circle) / 2));
+		transform: translate(calc(var(--progress-circle)/2),calc(var(--progress-circle)/2));
+
+		&:first-child {
+			stroke-dashoffset: 0;
+		}
+
+		&:last-child {
+			stroke: #fff;
+			stroke-dashoffset: calc((2 * 3.1415 * (var(--progress-size) / 2 - var(--progress-circle) / 2)) - var(--progress, 0) * (2 * 3.1415 * (var(--progress-size) / 2 - var(--progress-circle) / 2)) / 100);
+		}
+	}
+
+	&-value {
+		font-size: var(--fs-4);
+		font-weight: 600;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	&-hint {
+		font-size: var(--fs-1);
+		color: var(--primary-50);
+	}
+}

@@ -7,6 +7,7 @@
   <div class="site-container">
     @include('partials/header.html')
     <main class="main">
+      <h1 class="visually-hidden">Главная</h1>
       <div class="profile">
         <div class="container">
           <div class="page-header">
@@ -84,6 +85,78 @@
                       </svg>
                     </span>
                   </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper swiper-card">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="profile-card">
+                  <div class="profile-card-header">
+                    <h2 class="profile-card-title">
+                      Мой уровень
+                    </h2>
+
+                    <span class="icon profile-card-hint">
+                      <svg>
+                        <use xlink:href="img/icons/hint.svg#svg-hint"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <div class="progress" style="--progress: 62.5;">
+                    <svg>
+                      <circle></circle>
+                      <circle></circle>
+                    </svg>
+
+                    <h3 class="progress-value">
+                      3
+                    </h3>
+                  </div>
+                  <div class="progress-hint">
+                    240 баллов до след. уровня 
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="profile-card">
+                  <div class="profile-card-header">
+                    <h2 class="profile-card-title">
+                      Подарки
+                    </h2>
+
+                    <span class="icon profile-card-hint">
+                      <svg>
+                        <use xlink:href="img/icons/hint.svg#svg-hint"></use>
+                      </svg>
+                    </span>
+                  </div>
+
+                  <picture>
+                    <source srcset="./img/backgrounds/gift-bg.webp" type="image/webp">
+                    <img loading="lazy" src="./img/backgrounds/gift-bg.png" class="profile-card-image" width="112" height="112" alt="Картинка">
+                  </picture>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="profile-card">
+                  <div class="profile-card-header">
+                    <h2 class="profile-card-title">
+                      Мои бонусы
+                    </h2>
+
+                    <span class="icon profile-card-hint">
+                      <svg>
+                        <use xlink:href="img/icons/hint.svg#svg-hint"></use>
+                      </svg>
+                    </span>
+                  </div>
+
+                  <div class="profile-card-value">
+                    10 550
+                  </div>
                 </div>
               </div>
             </div>
