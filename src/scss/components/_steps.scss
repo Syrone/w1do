@@ -107,9 +107,21 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			background-image: var(--block2-gradient);
+			background-color: #434BA4;
 			border-radius: .75rem;
-			padding: .5rem;
+			padding: .625rem;
+
+			&-icon {
+				--_i-color: #676D9C;
+			}
+
+			&.is-checked {
+				background-image: var(--block2-gradient);
+
+				.steps-card-checkbox-icon {
+					--_i-color: var(--text-color);
+				}
+			}
 		}
 	}
 }
