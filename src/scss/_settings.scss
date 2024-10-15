@@ -44,7 +44,7 @@ a {
 .main {
   flex: 1;
   overflow: hidden;
-  margin-bottom: var(--header-nav-height, 4.5rem);
+  padding-bottom: var(--header-nav-height, 4.5rem);
 }
 
 .list-reset {

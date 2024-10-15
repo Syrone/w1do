@@ -91,366 +91,462 @@
 </header>
     <main class="main">
       <h1 class="visually-hidden">Главная</h1>
-      <section class="section profile">
-        <div class="container">
-          <div class="page-header">
-            <form action="#" class="search">
-              <div class="fieldset">
-                <input type="text" class="field field--search" placeholder="Поиск">
-                <span class="icon">
-                  <svg>
-                    <use xlink:href="img/icons/search.svg#svg-search"></use>
-                  </svg>
-                </span>
-              </div>
-            </form>
-
-            <nav class="profile-nav">
-              <a href="#" class="btn profile-nav-link">
-                <span class="icon">
-                  <svg>
-                    <use xlink:href="img/icons/user.svg#svg-user"></use>
-                  </svg>
-                </span>
-              </a>
-              <a href="#" class="btn profile-nav-link">
-                <span class="icon">
-                  <svg>
-                    <use xlink:href="img/icons/notify.svg#svg-notify"></use>
-                  </svg>
-                </span>
-              </a>
-            </nav>
-          </div>
-
-          <div class="profile-main">
-            <div class="profile-main-start">
-              <div class="profile-balance">
-                <span>
-                  Мой баланс:
-                </span>
-                <span class="profile-balance-value">
-                  20 000₽
-                </span>
-              </div>
-              <a href="#" class="btn btn-base btn-outline-light">
-                <span class="icon">
-                  <svg>
-                    <use xlink:href="img/icons/wallet.svg#svg-wallet"></use>
-                  </svg>
-                </span>
-                <span>
-                  Пополнить
-                </span>
-              </a>
-            </div>
-
-            <div class="profile-main-end">
-              <div class="profile-share">
-                <button class="btn profile-share-button">
+      <div class="main-sections">
+        <section class="section profile">
+          <div class="container">
+            <div class="page-header">
+              <form action="#" class="search">
+                <div class="fieldset">
+                  <input type="text" class="field field--search" placeholder="Поиск">
                   <span class="icon">
                     <svg>
-                      <use xlink:href="img/icons/arrow-left.svg#svg-arrow-left"></use>
+                      <use xlink:href="img/icons/search.svg#svg-search"></use>
                     </svg>
                   </span>
+                </div>
+              </form>
 
-                  <div class="profile-qr">
+              <nav class="profile-nav">
+                <a href="#" class="btn profile-nav-link">
+                  <span class="icon">
                     <svg>
-                      <use xlink:href="img/icons/qr.svg#svg-qr"></use>
+                      <use xlink:href="img/icons/user.svg#svg-user"></use>
                     </svg>
-                  </div>
-                </button>
-                <div class="profile-share-content">
-                  <a href="#" class="btn profile-share-link">
+                  </span>
+                </a>
+                <a href="#" class="btn profile-nav-link">
+                  <span class="icon">
+                    <svg>
+                      <use xlink:href="img/icons/notify.svg#svg-notify"></use>
+                    </svg>
+                  </span>
+                </a>
+              </nav>
+            </div>
+
+            <div class="profile-main">
+              <div class="profile-main-start">
+                <div class="profile-balance">
+                  <span>
+                    Мой баланс:
+                  </span>
+                  <span class="profile-balance-value">
+                    20 000₽
+                  </span>
+                </div>
+                <a href="#" class="btn btn-base btn-outline-light">
+                  <span class="icon">
+                    <svg>
+                      <use xlink:href="img/icons/wallet.svg#svg-wallet"></use>
+                    </svg>
+                  </span>
+                  <span>
+                    Пополнить
+                  </span>
+                </a>
+              </div>
+
+              <div class="profile-main-end">
+                <div class="profile-share">
+                  <button class="btn profile-share-button">
                     <span class="icon">
                       <svg>
-                        <use xlink:href="img/icons/share.svg#svg-share"></use>
+                        <use xlink:href="img/icons/arrow-left.svg#svg-arrow-left"></use>
                       </svg>
                     </span>
-                  </a>
+
+                    <div class="profile-qr">
+                      <svg>
+                        <use xlink:href="img/icons/qr.svg#svg-qr"></use>
+                      </svg>
+                    </div>
+                  </button>
+                  <div class="profile-share-content">
+                    <a href="#" class="btn profile-share-link">
+                      <span class="icon">
+                        <svg>
+                          <use xlink:href="img/icons/share.svg#svg-share"></use>
+                        </svg>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper swiper-card">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="profile-card">
+                    <div class="profile-card-header">
+                      <h2 class="profile-card-title">
+                        Мой уровень
+                      </h2>
+
+                      <span class="icon profile-card-hint">
+                        <svg>
+                          <use xlink:href="img/icons/hint.svg#svg-hint"></use>
+                        </svg>
+                      </span>
+                    </div>
+                    <div class="progress" style="--progress: 62.5;">
+                      <svg>
+                        <circle></circle>
+                        <circle></circle>
+                      </svg>
+
+                      <h3 class="progress-value">
+                        3
+                      </h3>
+                    </div>
+                    <div class="progress-hint">
+                      240 баллов до след. уровня
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="profile-card">
+                    <div class="profile-card-header">
+                      <h2 class="profile-card-title">
+                        Подарки
+                      </h2>
+
+                      <span class="icon profile-card-hint">
+                        <svg>
+                          <use xlink:href="img/icons/hint.svg#svg-hint"></use>
+                        </svg>
+                      </span>
+                    </div>
+
+                    <picture>
+                      <source srcset="./img/backgrounds/gift-bg.webp" type="image/webp">
+                      <img loading="lazy" src="./img/backgrounds/gift-bg.png" class="profile-card-image" width="112" height="112" alt="Картинка">
+                    </picture>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="profile-card">
+                    <div class="profile-card-header">
+                      <h2 class="profile-card-title">
+                        Мои бонусы
+                      </h2>
+
+                      <span class="icon profile-card-hint">
+                        <svg>
+                          <use xlink:href="img/icons/hint.svg#svg-hint"></use>
+                        </svg>
+                      </span>
+                    </div>
+
+                    <div class="profile-card-value">
+                      10 550
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+        </section>
 
-          <div class="swiper swiper-card">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="profile-card">
-                  <div class="profile-card-header">
-                    <h2 class="profile-card-title">
-                      Мой уровень
-                    </h2>
+        <section class="section steps decoration-container">
+          <span class="decoration decoration-type-1 decoration-delay-2000 left-n60px bottom-n120px"></span>
+          <span class="decoration decoration-type-2 decoration-delay-2000 left-n100px bottom-n120px"></span>
+          <span class="decoration decoration-type-4 decoration-delay-4000 right-n180px top-n10px"></span>
 
-                    <span class="icon profile-card-hint">
+          <div class="container">
+            <div class="swiper swiper-card steps-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <span class="steps-swiper-point"></span>
+                  <h2 class="steps-card-title">
+                    Установить
+                  </h2>
+                  <p class="steps-card-subtitle">
+                    Приложение или открыть
+                  </p>
+                  <div class="steps-card">
+                    <div class="steps-card-gift">
+                      <div class="steps-card-gift-value">
+                        + 10%
+                      </div>
+                      <div class="steps-card-gift-hint">
+                        кэшбэк на покупку
+                        в магазинах
+                      </div>
+                    </div>
+
+                    <div class="steps-card-checkbox is-checked">
+                      <span class="icon steps-card-checkbox-icon">
+                        <svg>
+                          <use xlink:href="img/icons/check.svg#svg-check"></use>
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <span class="steps-swiper-point"></span>
+                  <h2 class="steps-card-title">
+                    Приглашения
+                  </h2>
+                  <p class="steps-card-subtitle">
+                    Пригласить более 20 друзей
+                  </p>
+                  <div class="steps-card">
+                    <div class="steps-card-gift">
+                      <div class="steps-card-gift-value">
+                        + 15%
+                      </div>
+                      <div class="steps-card-gift-hint">
+                        кэшбэк на покупку
+                        в магазинах
+                      </div>
+                    </div>
+
+                    <div class="steps-card-checkbox">
+                      <span class="icon steps-card-checkbox-icon">
+                        <svg>
+                          <use xlink:href="img/icons/check.svg#svg-check"></use>
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <span class="steps-swiper-point"></span>
+                  <h2 class="steps-card-title">
+                    Приглашения
+                  </h2>
+                  <p class="steps-card-subtitle">
+                    Пригласить более 20 друзей
+                  </p>
+                  <div class="steps-card">
+                    <div class="steps-card-gift">
+                      <div class="steps-card-gift-value">
+                        + 10%
+                      </div>
+                      <div class="steps-card-gift-hint">
+                        кэшбэк на покупку
+                        в магазинах
+                      </div>
+                    </div>
+
+                    <div class="steps-card-checkbox">
+                      <span class="icon steps-card-checkbox-icon">
+                        <svg>
+                          <use xlink:href="img/icons/check.svg#svg-check"></use>
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <span class="steps-swiper-point"></span>
+                  <h2 class="steps-card-title">
+                    Приглашения
+                  </h2>
+                  <p class="steps-card-subtitle">
+                    Пригласить более 20 друзей
+                  </p>
+                  <div class="steps-card">
+                    <div class="steps-card-gift">
+                      <div class="steps-card-gift-value">
+                        + 10%
+                      </div>
+                      <div class="steps-card-gift-hint">
+                        кэшбэк на покупку
+                        в магазинах
+                      </div>
+                    </div>
+
+                    <div class="steps-card-checkbox">
+                      <span class="icon steps-card-checkbox-icon">
+                        <svg>
+                          <use xlink:href="img/icons/check.svg#svg-check"></use>
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section banner decoration-container">
+          <span class="decoration decoration-type-3 decoration-delay-4000 right-n120px top-n16px"></span>
+
+          <div class="container">
+            <div class="swiper swiper-banner">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="banner-card">
+                    <div class="banner-card-bg" style="background-image: url(./img/banners/sportmaster-bg.svg)"></div>
+                    <picture class="banner-card-picture">
+                      <img loading="lazy" src="./img/banners/sportmaster.svg" class="banner-card-image" width="83" height="54" alt="Картинка">
+                    </picture>
+                    <div class="banner-card-content">
+                      <div class="banner-card-suptitle">
+                        Спортмастер
+                      </div>
+                      <h2 class="banner-card-title">
+                        СКИДКА — <span class="text-primary-150">15%</span>
+                      </h2>
+                      <div class="banner-card-subtitle">
+                        При покупке товаров в разделе «одежда»
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="banner-card">
+                    <div class="banner-card-bg" style="background-image: url(./img/banners/sportmaster-bg.svg)"></div>
+                    <picture class="banner-card-picture">
+                      <img loading="lazy" src="./img/banners/sportmaster.svg" class="banner-card-image" width="83" height="54" alt="Картинка">
+                    </picture>
+                    <div class="banner-card-content">
+                      <div class="banner-card-suptitle">
+                        Спортмастер
+                      </div>
+                      <h2 class="banner-card-title">
+                        СКИДКА — <span class="text-primary-150">15%</span>
+                      </h2>
+                      <div class="banner-card-subtitle">
+                        При покупке товаров в разделе «одежда»
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="banner-card">
+                    <div class="banner-card-bg" style="background-image: url(./img/banners/sportmaster-bg.svg)"></div>
+                    <picture class="banner-card-picture">
+                      <img loading="lazy" src="./img/banners/sportmaster.svg" class="banner-card-image" width="83" height="54" alt="Картинка">
+                    </picture>
+                    <div class="banner-card-content">
+                      <div class="banner-card-suptitle">
+                        Спортмастер
+                      </div>
+                      <h2 class="banner-card-title">
+                        СКИДКА — <span class="text-primary-150">15%</span>
+                      </h2>
+                      <div class="banner-card-subtitle">
+                        При покупке товаров в разделе «одежда»
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section history decoration-container">
+          <span class="decoration left-n50px bottom-n100px"></span>
+
+          <div class="container">
+            <div class="section-header">
+              <h2 class="section-title">
+                История начислений
+              </h2>
+
+              <a href="#" class="btn section-more">
+                <span class="icon">
+                  <svg>
+                    <use xlink:href="img/icons/arrow-long-left.svg#svg-arrow-long-left"></use>
+                  </svg>
+                </span>
+              </a>
+            </div>
+
+            <ul class="list-reset history-list">
+              <li class="history-list-item">
+                <a href="#" class="history-list-item-link"></a>
+
+                <div class="history-list-item-inner">
+                  <div class="history-list-start">
+                    <picture class="history-list-picture">
+                      <img loading="lazy" src="./img/brands/sportmaster.svg" class="history-list-image" width="36" height="36" alt="Бренд">
+                    </picture>
+
+                    <div class="history-list-content">
+                      <h3 class="history-list-title">
+                        Спортмастер
+                      </h3>
+                      <p class="history-list-subtitle">
+                        Покупка в магазине
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="history-list-end">
+                    <div class="history-list-info">
+                      <time datetime="" class="history-list-date">
+                        03.06.2024
+                      </time>
+                      <div class="history-list-value success">
+                        +25
+                      </div>
+                    </div>
+                    <span class="icon history-list-icon">
                       <svg>
-                        <use xlink:href="img/icons/hint.svg#svg-hint"></use>
+                        <use xlink:href="img/icons/arrow-right.svg#svg-arrow-right"></use>
                       </svg>
                     </span>
                   </div>
-                  <div class="progress" style="--progress: 62.5;">
+                </div>
+              </li>
+              <li class="history-list-item">
+                <a href="#" class="history-list-item-link"></a>
+
+                <div class="history-list-item-inner">
+                  <div class="history-list-start">
+                    <picture class="history-list-picture">
+                      <img loading="lazy" src="./img/brands/sportmaster.svg" class="history-list-image" width="36" height="36" alt="Бренд">
+                    </picture>
+
+                    <div class="history-list-content">
+                      <h3 class="history-list-title">
+                        Спортмастер
+                      </h3>
+                      <p class="history-list-subtitle">
+                        Покупка в магазине
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="history-list-end">
+                    <div class="history-list-info">
+                      <time datetime="" class="history-list-date">
+                        03.06.2024
+                      </time>
+                      <div class="history-list-value error">
+                        -25
+                      </div>
+                    </div>
+                    <span class="icon history-list-icon">
+                      <svg>
+                        <use xlink:href="img/icons/arrow-right.svg#svg-arrow-right"></use>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </li>
+
+              <li class="history-list-bottom">
+                <button type="button" class="btn history-list-more">
+                  Показать еще
+                  <span class="icon">
                     <svg>
-                      <circle></circle>
-                      <circle></circle>
+                      <use xlink:href="img/icons/arrow-down.svg#svg-arrow-down"></use>
                     </svg>
-
-                    <h3 class="progress-value">
-                      3
-                    </h3>
-                  </div>
-                  <div class="progress-hint">
-                    240 баллов до след. уровня
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="profile-card">
-                  <div class="profile-card-header">
-                    <h2 class="profile-card-title">
-                      Подарки
-                    </h2>
-
-                    <span class="icon profile-card-hint">
-                      <svg>
-                        <use xlink:href="img/icons/hint.svg#svg-hint"></use>
-                      </svg>
-                    </span>
-                  </div>
-
-                  <picture>
-                    <source srcset="./img/backgrounds/gift-bg.webp" type="image/webp">
-                    <img loading="lazy" src="./img/backgrounds/gift-bg.png" class="profile-card-image" width="112" height="112" alt="Картинка">
-                  </picture>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="profile-card">
-                  <div class="profile-card-header">
-                    <h2 class="profile-card-title">
-                      Мои бонусы
-                    </h2>
-
-                    <span class="icon profile-card-hint">
-                      <svg>
-                        <use xlink:href="img/icons/hint.svg#svg-hint"></use>
-                      </svg>
-                    </span>
-                  </div>
-
-                  <div class="profile-card-value">
-                    10 550
-                  </div>
-                </div>
-              </div>
-            </div>
+                  </span>
+                </button>
+              </li>
+            </ul>
           </div>
-        </div>
-      </section>
-
-      <section class="section steps">
-        <div class="container">
-          <div class="swiper swiper-card steps-swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <span class="steps-swiper-point"></span>
-                <h2 class="steps-card-title">
-                  Установить
-                </h2>
-                <p class="steps-card-subtitle">
-                  Приложение или открыть
-                </p>
-                <div class="steps-card">
-                  <div class="steps-card-gift">
-                    <div class="steps-card-gift-value">
-                      + 10%
-                    </div>
-                    <div class="steps-card-gift-hint">
-                      кэшбэк на покупку
-                      в магазинах
-                    </div>
-                  </div>
-
-                  <div class="steps-card-checkbox is-checked">
-                    <span class="icon steps-card-checkbox-icon">
-                      <svg>
-                        <use xlink:href="img/icons/check.svg#svg-check"></use>
-                      </svg>
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <span class="steps-swiper-point"></span>
-                <h2 class="steps-card-title">
-                  Приглашения
-                </h2>
-                <p class="steps-card-subtitle">
-                  Пригласить более 20 друзей
-                </p>
-                <div class="steps-card">
-                  <div class="steps-card-gift">
-                    <div class="steps-card-gift-value">
-                      + 15%
-                    </div>
-                    <div class="steps-card-gift-hint">
-                      кэшбэк на покупку
-                      в магазинах
-                    </div>
-                  </div>
-
-                  <div class="steps-card-checkbox">
-                    <span class="icon steps-card-checkbox-icon">
-                      <svg>
-                        <use xlink:href="img/icons/check.svg#svg-check"></use>
-                      </svg>
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <span class="steps-swiper-point"></span>
-                <h2 class="steps-card-title">
-                  Приглашения
-                </h2>
-                <p class="steps-card-subtitle">
-                  Пригласить более 20 друзей
-                </p>
-                <div class="steps-card">
-                  <div class="steps-card-gift">
-                    <div class="steps-card-gift-value">
-                      + 10%
-                    </div>
-                    <div class="steps-card-gift-hint">
-                      кэшбэк на покупку
-                      в магазинах
-                    </div>
-                  </div>
-
-                  <div class="steps-card-checkbox">
-                    <span class="icon steps-card-checkbox-icon">
-                      <svg>
-                        <use xlink:href="img/icons/check.svg#svg-check"></use>
-                      </svg>
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <span class="steps-swiper-point"></span>
-                <h2 class="steps-card-title">
-                  Приглашения
-                </h2>
-                <p class="steps-card-subtitle">
-                  Пригласить более 20 друзей
-                </p>
-                <div class="steps-card">
-                  <div class="steps-card-gift">
-                    <div class="steps-card-gift-value">
-                      + 10%
-                    </div>
-                    <div class="steps-card-gift-hint">
-                      кэшбэк на покупку
-                      в магазинах
-                    </div>
-                  </div>
-
-                  <div class="steps-card-checkbox">
-                    <span class="icon steps-card-checkbox-icon">
-                      <svg>
-                        <use xlink:href="img/icons/check.svg#svg-check"></use>
-                      </svg>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section banner">
-        <div class="container">
-          <div class="swiper swiper-banner">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="banner-card">
-                  <div class="banner-card-bg" style="background-image: url(./img/banners/sportmaster-bg.svg)"></div>
-                  <picture class="banner-card-picture">
-                    <img loading="lazy" src="./img/banners/sportmaster.svg" class="banner-card-image" width="83" height="54" alt="Картинка">
-                  </picture>
-                  <div class="banner-card-content">
-                    <div class="banner-card-suptitle">
-                      Спортмастер
-                    </div>
-                    <h2 class="banner-card-title">
-                      СКИДКА — <span class="text-primary-150">15%</span>
-                    </h2>
-                    <div class="banner-card-subtitle">
-                      При покупке товаров в разделе «одежда»
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="banner-card">
-                  <div class="banner-card-bg" style="background-image: url(./img/banners/sportmaster-bg.svg)"></div>
-                  <picture class="banner-card-picture">
-                    <img loading="lazy" src="./img/banners/sportmaster.svg" class="banner-card-image" width="83" height="54" alt="Картинка">
-                  </picture>
-                  <div class="banner-card-content">
-                    <div class="banner-card-suptitle">
-                      Спортмастер
-                    </div>
-                    <h2 class="banner-card-title">
-                      СКИДКА — <span class="text-primary-150">15%</span>
-                    </h2>
-                    <div class="banner-card-subtitle">
-                      При покупке товаров в разделе «одежда»
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="banner-card">
-                  <div class="banner-card-bg" style="background-image: url(./img/banners/sportmaster-bg.svg)"></div>
-                  <picture class="banner-card-picture">
-                    <img loading="lazy" src="./img/banners/sportmaster.svg" class="banner-card-image" width="83" height="54" alt="Картинка">
-                  </picture>
-                  <div class="banner-card-content">
-                    <div class="banner-card-suptitle">
-                      Спортмастер
-                    </div>
-                    <h2 class="banner-card-title">
-                      СКИДКА — <span class="text-primary-150">15%</span>
-                    </h2>
-                    <div class="banner-card-subtitle">
-                      При покупке товаров в разделе «одежда»
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section history">
-        <div class="container">
-          <div class="section-header">
-            <h2 class="section-title">
-              История начислений
-            </h2>
-
-            <a href="#" class="btn section-more">
-              <span class="icon">
-                <svg>
-                  <use xlink:href="img/icons/arrow-long-left.svg#svg-arrow-long-left"></use>
-                </svg>
-              </span>
-            </a>
-          </div>
-        </div>
-      </section>
+        </section>
+      </div>
 
     </main>
     <footer class="footer">

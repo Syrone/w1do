@@ -1,16 +1,22 @@
 .section {
 	margin-bottom: 1.5rem;
 
+	&:last-child {
+		margin-bottom: .75rem;
+	}
+
 	&-header {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		gap: .5rem 1rem;
+		margin-bottom: .75rem;
 	}
 
 	&-title {
 		font-size: var(--fs-base);
 		font-weight: 400;
+		margin: 0;
 	}
 
 	&-more {
