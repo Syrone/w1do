@@ -6,3 +6,42 @@
 		height: auto;
 	}
 }
+
+.swiper-banner {
+	overflow: unset;
+
+	.swiper-slide {
+		transform: scale(.75);
+		transform-origin: unset;
+		transition-property: transform, transform-origin;
+		transition-duration: var(--transition-duration);
+		transition-timing-function: var(--transition-type);
+
+		&:first-child {
+			.banner-card {
+				background-image: none;
+				background-color: #DE98FF;
+			}
+		}
+
+		
+		&:last-child {
+			.banner-card {
+				background-image: none;
+				background-color: #6FFFFF;
+			}
+		}
+	}
+
+	.swiper-slide-active {
+		transform: initial;
+	}
+
+	.swiper-slide-prev {
+		transform-origin: center right;
+	}
+	
+	.swiper-slide-next {
+		transform-origin: center left;
+	}
+}

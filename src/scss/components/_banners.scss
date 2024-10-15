@@ -1,0 +1,49 @@
+.banner {
+
+	&-card {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: .5rem;
+		background-image: var(--banner-gradient);
+		border-radius: 1rem;
+		padding: 2rem;
+		position: relative;
+
+		&-bg {
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+			position: absolute;
+			inset: 0;
+		}
+
+		&-content,
+		&-picture {
+			position: relative;
+			z-index: 1;
+		}
+
+		&-picture {
+			flex-shrink: 0;
+		}
+
+		&-image {
+			display: block;
+			object-fit: contain;
+		}
+
+		&-suptitle {
+			font-size: 1.125rem;
+		}
+
+		&-title {
+			font-size: var(--h3);
+			font-weight: 900;
+		}
+
+		&-subtitle {
+			font-size: var(--fs-1);
+		}
+	}
+}

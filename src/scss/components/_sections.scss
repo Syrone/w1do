@@ -1,3 +1,19 @@
 .section {
 	margin-bottom: 1.5rem;
+
+	&-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: .5rem 1rem;
+	}
+
+	&-title {
+		font-size: var(--fs-base);
+		font-weight: 400;
+	}
+
+	&-more {
+		--_icon-size: 1.25rem;
+	}
 }
