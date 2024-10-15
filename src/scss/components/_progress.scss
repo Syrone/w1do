@@ -15,6 +15,7 @@
 		transform: rotate(-90deg);
 	}
 
+	/*! cx, cy и r для circle */
 	circle {
 		cx: calc(var(--progress-size) / 2 - var(--progress-circle) / 2);
 		cy: calc(var(--progress-size) / 2 - var(--progress-circle) / 2);
