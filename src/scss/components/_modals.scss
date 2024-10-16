@@ -1,0 +1,22 @@
+.graph-modal {
+	background-color: rgba(var(--body-bg-rgb), .7);
+	backdrop-filter: blur(1rem);
+	z-index: 1100;
+
+	&__container {
+		width: calc(100% - var(--container-offset) * 2);
+		min-height: 100%;
+		background-color: transparent;
+		margin: 0 auto;
+		padding: 0;
+	}
+
+	&__body {
+		padding-top: 8.25rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 2rem;
+	}
+}

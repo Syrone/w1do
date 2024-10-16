@@ -17,3 +17,71 @@
 .error {
 	color: var(--error-color);
 }
+
+.translate-middle {
+  transform: translate(-50%, -50%);
+}
+
+.translate-middle-y {
+  transform: translateY(-50%);
+}
+
+.translate-middle-x {
+  transform: translateX(-50%);
+}
+
+@for $i from 1 through 10 {
+  .z-#{$i} {
+    z-index: $i !important;
+  }
+
+  .top-#{$i * 10} {
+    top: #{$i * 10}#{'%'};
+  }
+
+  .right-#{$i * 10} {
+    right: #{$i * 10}#{'%'};
+  }
+
+  .bottom-#{$i * 10} {
+    bottom: #{$i * 10}#{'%'};
+  }
+  
+  .left-#{$i * 10} {
+    left: #{$i * 10}#{'%'};
+  }
+}
+
+@for $i from 1 through 20 {
+	.top-n#{$i * 10}px {
+    top: -#{$i * 10}px;
+  }
+
+	.top-#{$i * 10}px {
+    top: #{$i * 10}px;
+  }
+	
+	.bottom-n#{$i * 10}px {
+    bottom: -#{$i * 10}px;
+  }
+	
+	.bottom-#{$i * 10}px {
+    bottom: #{$i * 10}px;
+  }
+
+  .left-n#{$i * 10}px {
+    left: -#{$i * 10}px;
+  }
+
+  .left-#{$i * 10}px {
+    left: #{$i * 10}px;
+  }
+
+	.right-n#{$i * 10}px {
+    right: -#{$i * 10}px;
+  }
+
+	.right-#{$i * 10}px {
+    right: #{$i * 10}px;
+  }
+}

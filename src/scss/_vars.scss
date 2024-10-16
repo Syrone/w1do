@@ -36,6 +36,7 @@
   --primary-200: #51ABFF;
   --primary-250: #66A4FF;
   --primary-300: #00A3FF;
+  --primary-350: #6076F5;
   --primary-400: #0047FF;
   --primary-500: #4000F8;
   --primary-600: #263DC0;
@@ -43,6 +44,7 @@
   --primary-800: #061DA0;
   --primary-900: #000C55;
   --text-color: #fff;
+  --dark-color: #181F43;
   --light-color: #fff;
   --success-color: #ADFFAB;
   --error-color: #FF5353;
@@ -56,13 +58,16 @@
   --primary-200-rgb: 81, 171, 255;
   --primary-250-rgb: 102, 164, 255;
   --primary-300-rgb: 0, 163, 255;
+  --primary-350-rgb: 96, 118, 245;
   --primary-400-rgb: 0, 71, 255;
   --primary-500-rgb: 64, 0, 248;
   --primary-600-rgb: 38, 61, 192;
   --primary-700-rgb: 21, 40, 150;
   --primary-800-rgb: 6, 29, 160;
   --primary-900-rgb: 0, 12, 85;
+  --body-bg-rgb: 18, 18, 18;
   --text-color-rgb: 255, 255, 255;
+  --dark-color-rgb: 24, 31, 67;
   --light-color-rgb: 255, 255, 255;
   --success-color-rgb: 173, 255, 171;
   --error-color-rgb: 255, 83, 83;
@@ -73,6 +78,8 @@
   --banner-gradient: linear-gradient(180deg, var(--primary-700) 0%, var(--primary-600) 100%);
   --block-gradient: linear-gradient(90deg, rgba(var(--primary-100-rgb), 0.4) 0%, rgba(var(--primary-300-rgb), 0.4) 100%);
   --block2-gradient: linear-gradient(90deg, rgba(var(--primary-100-rgb), 0.4) 0%, rgba(var(--primary-400-rgb), 0.4) 100%);
+  --block3-gradient: linear-gradient(90deg, rgba(var(--primary-100-rgb), 1) 0%, rgba(var(--primary-400-rgb), 1) 100%);
+  --button-gradient: linear-gradient(160deg, var(--primary) 0%, var(--primary-100) 50%, var(--primary-300) 100%);
 
   // transition
   --transition-duration: 200ms;

@@ -17,18 +17,26 @@
 .decoration {
 	--_size: 10rem;
 	--_color: #644BFF;
+	--_blur: blur(6.25rem);
+	--_delay: 0ms;
 
-	width: var(--_size);
-	height: var(--_size);
-	background-color: var(--_color);
-	border-radius: 50%;
-	filter: blur(6.25rem);
 	pointer-events: none;
 	user-select: none;
-	will-change: transform, opacity;
-	animation: pulseAndFade 6s ease-in-out infinite;
 	position: absolute;
 	z-index: -1;
+
+	&::after {
+		content: '';
+		width: var(--_size);
+		height: var(--_size);
+		display: block;
+		background-color: var(--_color);
+		border-radius: 50%;
+		filter: var(--_blur);
+		will-change: transform, opacity;
+		animation: pulseAndFade 6s ease-in-out infinite;
+		animation-delay: var(--_delay);
+	}
 
 	&-type-1 {
 		--_size: 13.75rem;
@@ -38,8 +46,7 @@
 	&-type-2 {
 		--_size: 11.25rem;
 		--_color: #001BB6;
-
-		filter: blur(10rem);
+		--_blur: blur(10rem);
 	}
 
 	&-type-3 {
@@ -50,53 +57,56 @@
 	&-type-4 {
 		--_size: 17.5rem;
 		--_color: #2743E2;
+		--_blur: blur(15rem);
+	}
 
-		filter: blur(15rem);
+	&-type-5 {
+		--_size: 20rem;
+		--_color: #29D8FF;
+	}
+
+	&-type-6 {
+		--_size: 12.5rem;
+		--_color: #00109B;
+		--_blur: blur(2.5rem);
+	}
+
+	&-type-7 {
+		--_size: 13.75rem;
+		--_color: #D4D9FF;
+		--_blur: blur(7.5rem);
+	}
+
+	&-type-8 {
+		--_size: 20rem;
+		--_color: #2945E5;
 	}
 
 	&-delay-250 {
-		animation-delay: 250ms;
+		--_delay: 250ms;
 	}
 	
 	&-delay-500 {
-		animation-delay: 500ms;
+		--_delay: 500ms;
 	}
 	
 	&-delay-750 {
-		animation-delay: 750ms;
+		--_delay: 750ms;
 	}
 	
 	&-delay-1000 {
-		animation-delay: 1000ms;
+		--_delay: 1000ms;
 	}
 	
 	&-delay-2000 {
-		animation-delay: 2000ms;
+		--_delay: 2000ms;
 	}
 	
 	&-delay-3000 {
-		animation-delay: 3000ms;
+		--_delay: 3000ms;
 	}
 	
 	&-delay-4000 {
-		animation-delay: 4000ms;
+		--_delay: 4000ms;
 	}
-}
-
-@for $i from 1 through 20 {
-	.top-n#{$i * 10}px {
-    top: -#{$i * 10}px;
-  }
-	
-	.bottom-n#{$i * 10}px {
-    bottom: -#{$i * 10}px;
-  }
-
-  .left-n#{$i * 10}px {
-    left: -#{$i * 10}px;
-  }
-
-	.right-n#{$i * 10}px {
-    right: -#{$i * 10}px;
-  }
 }

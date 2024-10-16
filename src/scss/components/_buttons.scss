@@ -79,6 +79,25 @@
 	--_border-color-active: var(--light-color);
 }
 
+.btn-gradient {
+	--_font-weight: 600;
+	--_color: var(--dark-color);
+	--_color-active: var(--_color);
+
+	background-image: var(--button-gradient);
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.35);
+
+	&[disabled] {
+		--_background-color: rgba(var(--primary-350-rgb), .35);
+		--_background-color-active: rgba(var(--primary-350-rgb), .35);
+
+		background-image: none;
+		backdrop-filter: blur(21px);
+		pointer-events: none;
+		user-select: none;
+	}
+}
+
 .btn-base {
 	--_height: 2.5rem;
 	--_font-size: var(--fs-base);
@@ -91,9 +110,17 @@
 .btn-sm {
 	--_height: 1.5rem;
 	--_font-size: .875rem;
+	--_border-radius: .75rem;
 }
 
 .btn-lg {
-	--_height: 2.5rem;
-	--_font-size: 1.25rem;
+	--_height: 3.125rem;
+	--_border-radius: 1.5rem;
+}
+
+.btn-xl {
+	--_height: 4rem;
+	--_border-radius: 1rem;
+	--_padding-y: .75rem;
+	--_padding-x: 1.25rem;
 }

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+      <h1 class="visually-hidden">Подарки</h1>
+      <div class="main-sections">
+        <section class="section profile gift decoration-container">
+          <span class="decoration decoration-type-5 right-n120px top-n10px"></span>
+          <span class="decoration decoration-type-6 decoration-delay-2000 left-n40px bottom-n10px z-1"></span>
+          <span class="decoration decoration-type-7 decoration-delay-4000 left-n70px top-80px z-1"></span>
+          <span class="decoration decoration-type-8 right-50 top-50 translate-middle z-1"></span>
+
+          <div class="container">
+            <div class="page-header">
+              <a href="./index.html" class="btn page-header-back">
+                <span class="icon">
+                  <svg>
+                    <use xlink:href="img/icons/arrow-left.svg#svg-arrow-left"></use>
+                  </svg>
+                </span>
+              </a>
+
+              <h2 class="page-header-title">
+                Подарки
+              </h2>
+            </div>
+
+            <div class="gift-container" style="background-image: url(./img/gifts/gift-bg.svg);">
+              <div class="gift-body">
+                <picture class="gift-picture">
+                  <source srcset="./img/gifts/gift-close.webp" type="image/webp">
+                  <img loading="lazy" src="./img/gifts/gift-close.png" class="gift-image" width="336" height="336"
+                    alt="Картинка">
+                </picture>
+                <picture class="gift-picture">
+                  <source srcset="./img/gifts/gift-open.webp" type="image/webp">
+                  <img loading="lazy" src="./img/gifts/gift-open.png" class="gift-image" width="336" height="336"
+                    alt="Картинка">
+                </picture>
+                <div class="gift-item">
+                  <h3 class="gift-item-title">
+                    VIP
+                    СТАТУС
+                  </h3>
+                  <p class="gift-item-hint">
+                    2 мес
+                  </p>
+                </div>
+                <div class="gift-quantity">
+                  Х<span>0</span>
+                </div>
+              </div>
+              <div class="gift-bottom">
+                <button type="button" class="btn btn-xl btn-gradient">
+                  Открыть сундук
+                </button>
+              </div>
+            </div>
+            <!-- DEMO SCRIPT -->
+            <script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const giftBody = document.querySelector('.gift-container .gift-body')
+                const giftButton = document.querySelector('.gift-container .gift-bottom .btn')
+
+                giftButton.addEventListener('click', () => {
+                  const giftPicture = giftBody.querySelector('.gift-picture .gift-image')
+
+                  // Проверяем, открыт ли подарок (класс is-opened уже добавлен)
+                  if (giftBody.classList.contains('is-opened')) {
+                    // Убираем класс is-opened
+                    giftBody.classList.remove('is-opened')
+
+                    // Ждём 1 секунду и снова запускаем анимацию
+                    setTimeout(() => {
+                      giftBody.classList.add('is-animated')
+                      giftPicture.classList.add('shake-animated')
+                      giftButton.setAttribute('disabled', '')
+
+                      // Снимаем анимацию через 3 секунды и снова добавляем класс is-opened
+                      setTimeout(() => {
+                        giftBody.classList.remove('is-animated')
+                        giftPicture.classList.remove('shake-animated')
+                        giftBody.classList.add('is-opened')
+                        giftButton.removeAttribute('disabled')
+                      }, 3000)
+
+                      setTimeout(() => {
+                        window.graphModal.open('modal-gift');
+                      }, 4000)
+                    }, 1000)
+                  } else {
+                    // Добавляем класс анимации при первом клике
+                    giftBody.classList.add('is-animated')
+                    giftPicture.classList.add('shake-animated')
+                    giftButton.setAttribute('disabled', '')
+
+                    // Удаляем класс через 3 секунды и добавляем класс is-opened
+                    setTimeout(() => {
+                      giftBody.classList.remove('is-animated')
+                      giftPicture.classList.remove('shake-animated')
+                      giftBody.classList.add('is-opened')
+                      giftButton.removeAttribute('disabled')
+                    }, 3000)
+
+                    setTimeout(() => {
+                        window.graphModal.open('modal-gift');
+                      }, 4000)
+                  }
+                })
+              })
+            </script>
+          </div>
+        </section>
+
+        <section class="section steps decoration-container">
+          <span class="decoration decoration-type-1 decoration-delay-2000 left-n60px bottom-n120px"></span>
+          <span class="decoration decoration-type-2 decoration-delay-2000 left-n100px bottom-n120px"></span>
+          <span class="decoration decoration-type-4 decoration-delay-4000 right-n180px top-n10px"></span>
+
+          <div class="container">
+            <div class="swiper swiper-card steps-swiper steps-swiper--decoration">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <span class="steps-swiper-point"></span>
+                  <h2 class="steps-card-title">
+                    Установить
+                  </h2>
+                  <p class="steps-card-subtitle">
+                    Приложение или открыть
+                  </p>
+                  <div class="steps-card">
+                    <picture class="steps-card-picture">
+                      <source srcset="./img/gifts/gift-open.webp" type="image/webp">
+                      <img loading="lazy" src="./img/gifts/gift-open.png" class="steps-card-image" width="80"
+                        height="80" alt="Картинка">
+                    </picture>
+
+                    <div class="steps-card-checkbox is-checked">
+                      <span class="icon steps-card-checkbox-icon">
+                        <svg>
+                          <use xlink:href="img/icons/check.svg#svg-check"></use>
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <span class="steps-swiper-point"></span>
+                  <h2 class="steps-card-title">
+                    Приглашения
+                  </h2>
+                  <p class="steps-card-subtitle">
+                    Пригласить более 20 друзей
+                  </p>
+                  <div class="steps-card">
+                    <picture class="steps-card-picture">
+                      <source srcset="./img/gifts/gift-close.webp" type="image/webp">
+                      <img loading="lazy" src="./img/gifts/gift-close.png" class="steps-card-image" width="80"
+                        height="80" alt="Картинка">
+                    </picture>
+
+                    <div class="steps-card-checkbox">
+                      <span class="icon steps-card-checkbox-icon">
+                        <svg>
+                          <use xlink:href="img/icons/check.svg#svg-check"></use>
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <span class="steps-swiper-point"></span>
+                  <h2 class="steps-card-title">
+                    Приглашения
+                  </h2>
+                  <p class="steps-card-subtitle">
+                    Пригласить более 20 друзей
+                  </p>
+                  <div class="steps-card">
+                    <picture class="steps-card-picture">
+                      <source srcset="./img/gifts/gift-close.webp" type="image/webp">
+                      <img loading="lazy" src="./img/gifts/gift-close.png" class="steps-card-image" width="80"
+                        height="80" alt="Картинка">
+                    </picture>
+
+                    <div class="steps-card-checkbox">
+                      <span class="icon steps-card-checkbox-icon">
+                        <svg>
+                          <use xlink:href="img/icons/check.svg#svg-check"></use>
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <span class="steps-swiper-point"></span>
+                  <h2 class="steps-card-title">
+                    Приглашения
+                  </h2>
+                  <p class="steps-card-subtitle">
+                    Пригласить более 20 друзей
+                  </p>
+                  <div class="steps-card">
+                    <picture class="steps-card-picture">
+                      <source srcset="./img/gifts/gift-close.webp" type="image/webp">
+                      <img loading="lazy" src="./img/gifts/gift-close.png" class="steps-card-image" width="80"
+                        height="80" alt="Картинка">
+                    </picture>
+
+                    <div class="steps-card-checkbox">
+                      <span class="icon steps-card-checkbox-icon">
+                        <svg>
+                          <use xlink:href="img/icons/check.svg#svg-check"></use>
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section steps decoration-container">
+          <span class="decoration decoration-type-3 decoration-delay-4000 right-n120px top-n16px"></span>
+          <span class="decoration left-n50px bottom-n100px"></span>
+
+          <div class="container">
+            <div class="section-header">
+              <h2 class="section-title">
+                Мои призы
+              </h2>
+
+              <a href="./404.html" class="btn section-more">
+                Посмотреть все
+
+                <span class="icon">
+                  <svg>
+                    <use xlink:href="img/icons/arrow-long-left.svg#svg-arrow-long-left"></use>
+                  </svg>
+                </span>
+              </a>
+            </div>
+
+            <div class="swiper swiper-card">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <article class="gift-card">
+                    <a href="#" class="streched-link"></a>
+                    <div class="gift-card-inner">
+                      <picture class="gift-card-picture">
+                        <img loading="lazy" src="./img/brands/sportmaster-image.svg" class="gift-card-image" width="90"
+                          height="60" alt="Картинка">
+                      </picture>
+                      <h3 class="gift-card-title">
+                        скидка 10%
+                      </h3>
+                      <p class="gift-card-subtitle">
+                        на первый заказ
+                      </p>
+                    </div>
+                  </article>
+                </div>
+                <div class="swiper-slide">
+                  <article class="gift-card">
+                    <a href="#" class="streched-link"></a>
+                    <div class="gift-card-inner">
+                      <picture class="gift-card-picture">
+                        <source srcset="./img/brands/sokolov-image.webp" type="image/webp">
+                        <img loading="lazy" src="./img/brands/sokolov-image.jpg" class="gift-card-image" width="90"
+                          height="60" alt="Картинка">
+                      </picture>
+                      <h3 class="gift-card-title">
+                        скидка 15%
+                      </h3>
+                      <p class="gift-card-subtitle">
+                        на первый заказ
+                      </p>
+                    </div>
+                  </article>
+                </div>
+                <div class="swiper-slide">
+                  <article class="gift-card">
+                    <a href="#" class="streched-link"></a>
+                    <div class="gift-card-inner">
+                      <picture class="gift-card-picture">
+                        <source srcset="./img/brands/eduem-image.webp" type="image/webp">
+                        <img loading="lazy" src="./img/brands/eduem-image.jpg" class="gift-card-image" width="90"
+                          height="60" alt="Картинка">
+                      </picture>
+                      <h3 class="gift-card-title">
+                        скидка 15%
+                      </h3>
+                      <p class="gift-card-subtitle">
+                        на первый заказ
+                      </p>
+                    </div>
+                  </article>
+                </div>
+                <div class="swiper-slide">
+                  <article class="gift-card">
+                    <a href="#" class="streched-link"></a>
+                    <div class="gift-card-inner">
+                      <picture class="gift-card-picture">
+                        <source srcset="./img/brands/eduem-image.webp" type="image/webp">
+                        <img loading="lazy" src="./img/brands/eduem-image.jpg" class="gift-card-image" width="90"
+                          height="60" alt="Картинка">
+                      </picture>
+                      <h3 class="gift-card-title">
+                        скидка 15%
+                      </h3>
+                      <p class="gift-card-subtitle">
+                        на первый заказ
+                      </p>
+                    </div>
+                  </article>
+                </div>
+                <div class="swiper-slide">
+                  <article class="gift-card">
+                    <a href="#" class="streched-link"></a>
+                    <div class="gift-card-inner">
+                      <picture class="gift-card-picture">
+                        <source srcset="./img/brands/eduem-image.webp" type="image/webp">
+                        <img loading="lazy" src="./img/brands/eduem-image.jpg" class="gift-card-image" width="90"
+                          height="60" alt="Картинка">
+                      </picture>
+                      <h3 class="gift-card-title">
+                        скидка 15%
+                      </h3>
+                      <p class="gift-card-subtitle">
+                        на первый заказ
+                      </p>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      @include('partials/modals.html')
+    </main>
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>
