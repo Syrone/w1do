@@ -1,14 +1,17 @@
 .banner {
 
 	&-card {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: .5rem;
-		background-image: var(--banner-gradient);
-		border-radius: 1rem;
-		padding: 2rem;
 		position: relative;
+
+		&-inner {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: .5rem;
+			background-image: var(--banner-gradient);
+			border-radius: 1rem;
+			padding: 2rem;
+		}
 
 		&-bg {
 			background-repeat: no-repeat;

@@ -19,23 +19,6 @@
 				display: flex;
 				justify-content: space-between;
 				gap: 1rem;
-				
-				transform: initial;
-				transition-property: transform;
-				transition-duration: var(--transition-duration);
-				transition-timing-function: var(--transition-type);
-			}
-
-			&-link {
-				position: absolute;
-				inset: 0;
-
-				&:is(:focus-visible, :active, .is-active) {
-
-					~ .history-list-item-inner {
-						transform: scale(.875);
-					}
-				}
 			}
 		}
 

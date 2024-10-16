@@ -1,0 +1,19 @@
+.streched-link {
+	position: absolute;
+	inset: 0;
+	z-index: 10;
+
+	~ * {
+		transform: initial;
+		transition-property: transform;
+		transition-duration: var(--transition-duration);
+		transition-timing-function: var(--transition-type);
+	}
+
+	&:is(:focus-visible, :active, .is-active) {
+
+		~ * {
+			transform: scale(.875);
+		}
+	}
+}
