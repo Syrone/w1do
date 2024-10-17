@@ -1,0 +1,41 @@
+.article {
+
+	&-card {
+		height: 100%;
+		position: relative;
+		
+		&-inner {
+			width: 17.5rem;
+			height: 100%;
+			display: flex;
+			justify-content: space-between;
+			gap: .75rem;
+			background-image: var(--article-gradient);
+			border-radius: .625rem;
+			padding: .75rem;
+		}
+
+		&-title {
+			font-size: var(--fs-base);
+			font-weight: 700;
+			margin-bottom: .5rem;
+		}
+
+		&-content {
+			font-size: var(--fs-3);
+			color: var(--primary-50);
+		}
+
+		&-picture {
+			flex-shrink: 0;
+		}
+
+		&-image {
+			width: 6.25rem;
+			display: block;
+			border-radius: 1rem;
+			aspect-ratio: 1 / 1;
+			object-fit: cover;
+		}
+	}
+}

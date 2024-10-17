@@ -43,6 +43,7 @@
   --primary-700: #152896;
   --primary-800: #061DA0;
   --primary-900: #000C55;
+  --accent: #9E58F8;
   --text-color: #fff;
   --dark-color: #181F43;
   --light-color: #fff;
@@ -65,6 +66,7 @@
   --primary-700-rgb: 21, 40, 150;
   --primary-800-rgb: 6, 29, 160;
   --primary-900-rgb: 0, 12, 85;
+  --accent-rgb: 158, 88, 248;
   --body-bg-rgb: 18, 18, 18;
   --text-color-rgb: 255, 255, 255;
   --dark-color-rgb: 24, 31, 67;
@@ -79,6 +81,7 @@
   --block-gradient: linear-gradient(90deg, rgba(var(--primary-100-rgb), 0.4) 0%, rgba(var(--primary-300-rgb), 0.4) 100%);
   --block2-gradient: linear-gradient(90deg, rgba(var(--primary-100-rgb), 0.4) 0%, rgba(var(--primary-400-rgb), 0.4) 100%);
   --block3-gradient: linear-gradient(90deg, rgba(var(--primary-100-rgb), 1) 0%, rgba(var(--primary-400-rgb), 1) 100%);
+  --article-gradient: linear-gradient(135deg, rgba(var(--accent-rgb), .4) 0%, rgba(var(--primary-400-rgb), .4) 100%);
   --button-gradient: linear-gradient(160deg, var(--primary) 0%, var(--primary-100) 50%, var(--primary-300) 100%);
 
   // transition

@@ -7,19 +7,50 @@
 		gap: 1rem;
 		padding-block: 1.25rem;
 		position: relative;
+		z-index: 10;
 
 		&-title {
 			margin-inline: auto;
-			padding-inline: 2rem;
+			padding-right: 2.25rem;
 		}
 
 		&-back {
 			--_icon-size: 1.25rem;
+		}
+	}
 
-			position: absolute;
-			left: 0;
-			top: 50%;
-			transform: translateY(-50%);
+	&-404 {
+		margin-bottom: 3rem;
+
+		&-content {
+			padding-top: 6.25rem;
+		}
+	}
+
+	&-article {
+
+		&-title {
+			font-size: var(--h2);
+			font-weight: 700;
+			margin-bottom: 0.25rem;
+		}
+
+		&-subtitle {
+			font-size: var(--fs-3);
+		}
+
+		&--md {
+			.page-article {
+
+				&-title {
+					font-size: var(--h3);
+					margin-bottom: .5rem;
+				}
+
+				&-subtitle {
+					color: var(--primary-50);
+				}
+			}
 		}
 	}
 }

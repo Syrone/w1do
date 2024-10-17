@@ -10,6 +10,12 @@
 	color: var(--primary-150);
 }
 
+.image-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .success {
 	color: var(--success-color);
 }
@@ -52,7 +58,7 @@
   }
 }
 
-@for $i from 1 through 20 {
+@for $i from 1 through 30 {
 	.top-n#{$i * 10}px {
     top: -#{$i * 10}px;
   }
