@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    <!-- @include('partials/header.html') -->
+    <main class="main main-not-header">
+      <h1 class="visually-hidden">Страница 404</h1>
+      <div class="main-sections">
+        <section class="section promotion decoration-container">
+          <span class="decoration decoration-type-1 right-n120px top-n10px"></span>
+          <span class="decoration decoration-type-3 left-n80px top-160px"></span>
+          <span class="decoration decoration-type-8 decoration-delay-4000 left-n290px top-240px"></span>
+          <span class="decoration decoration-type-1 decoration-delay-4000 left-n180px bottom-120px"></span>
+          <span class="decoration decoration-type-3 decoration-delay-4000 right-n200px bottom-n100px"></span>
+          <span class="decoration decoration-type-1 decoration-delay-4000 right-n140px bottom-20px"></span>
+          <span class="decoration decoration-type-3 decoration-delay-4000 left-n10px bottom-n300px"></span>
+
+          <div class="container">
+            <div class="page-header">
+              <a href="./index.html" class="btn page-header-back">
+                <span class="icon">
+                  <svg>
+                    <use xlink:href="img/icons/arrow-left.svg#svg-arrow-left"></use>
+                  </svg>
+                </span>
+              </a>
+            </div>
+
+            <div class="page-article">
+              <div>
+                <h2 class="page-article-title">
+                  Спортмастер 
+                </h2>
+                <p class="page-article-subtitle">
+                  Получай фишки за покупки и забери 3 
+                  <br>
+                  питательных протеиновых батончика бесплатно!
+                </p>
+              </div>
+
+              <div class="promotion-body">
+                <span class="decoration decoration-type-9 top-30px left-40px z-1"></span>
+                <span class="decoration decoration-type-10 top-50 right-40px translate-middle-y"></span>
+                <span class="decoration decoration-type-11 decoration-delay-4000 top-50 left-50 translate-middle z-2"></span>
+                <span class="promotion-body-bg" style="background-image: url(./img/promotion/background-svg.svg);"></span>
+                <p class="promotion-body-quantity">
+                  Собрано: <span>4 из 10</span>
+                </p>
+                <picture>
+                  <source srcset="./img/promotion/image-1.webp" type="image/webp">
+                  <img loading="lazy" src="./img/promotion/image-1" class="promotion-body-image" width="343" height="318" alt="Картинка">
+                </picture>
+              </div>
+
+              <div class="promotion-steps">
+                <span class="promotion-step is-active">
+                  <span class="promotion-step-value">1</span>
+                </span>
+                <span class="promotion-step is-active">
+                  <span class="promotion-step-value">2</span>
+                </span>
+                <span class="promotion-step is-active">
+                  <span class="promotion-step-value">3</span>
+                </span>
+                <span class="promotion-step is-active">
+                  <span class="promotion-step-value">4</span>
+                </span>
+                <span class="promotion-step">
+                  <span class="promotion-step-value">5</span>
+                </span>
+                <span class="promotion-step">
+                  <span class="promotion-step-value">6</span>
+                </span>
+                <span class="promotion-step">
+                  <span class="promotion-step-value">7</span>
+                </span>
+                <span class="promotion-step">
+                  <span class="promotion-step-value">8</span>
+                </span>
+                <span class="promotion-step">
+                  <span class="promotion-step-value">9</span>
+                </span>
+                <span class="promotion-step">
+                  <span class="promotion-step-value">10</span>
+                </span>
+              </div>
+
+              <div class="promotion-bottom">
+                <button type="button" class="btn btn-xl btn-gradient promotion-bottom-button">
+                  Получить бесплатно
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      @include('partials/modals.html')
+    </main>
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

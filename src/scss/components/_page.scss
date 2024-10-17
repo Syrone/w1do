@@ -23,6 +23,9 @@
 		margin-bottom: 3rem;
 
 		&-content {
+			display: flex;
+			flex-direction: column;
+			gap: 1.5rem;
 			padding-top: 6.25rem;
 		}
 	}

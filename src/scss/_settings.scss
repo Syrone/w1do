@@ -44,7 +44,11 @@ a {
 .main {
   flex: 1;
   overflow: hidden;
-  padding-bottom: var(--header-nav-height, 4.5rem);
+  padding-bottom: 1rem;
+
+  &:not(.main-not-header) {
+    padding-bottom: var(--header-nav-height, 4.5rem);
+  }
 }
 
 .list-reset {

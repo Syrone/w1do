@@ -82,6 +82,22 @@
 		--_color: #2945E5;
 	}
 
+	&-type-9 {
+		--_size: 15rem;
+		--_color: #2945E5;
+	}
+
+	&-type-10 {
+		--_size: 7.5rem;
+		--_color: #29d8ff;
+	}
+
+	&-type-11 {
+		--_size: 12.5rem;
+		--_color: #fff;
+		--_blur: blur(2.5rem);
+	}
+
 	&-delay-250 {
 		--_delay: 250ms;
 	}
