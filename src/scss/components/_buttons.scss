@@ -115,7 +115,13 @@
 
 .btn-lg {
 	--_height: 3.125rem;
-	--_border-radius: 1.5rem;
+	--_border-radius: .75rem;
+	--_padding-y: .25rem;
+	--_padding-x: 1rem;
+
+	--_icon-size: 1.5rem;
+
+	gap: .375rem;
 }
 
 .btn-xl {

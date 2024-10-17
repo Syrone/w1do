@@ -86,6 +86,9 @@
   --article-gradient: linear-gradient(135deg, rgba(var(--accent-rgb), .4) 0%, rgba(var(--primary-400-rgb), .4) 100%);
   --button-gradient: linear-gradient(160deg, var(--primary) 0%, var(--primary-100) 50%, var(--primary-300) 100%);
 
+  --text-gradient: linear-gradient(120deg, var(--primary-300) 0%, var(--accent) 100%);
+  --text2-gradient: linear-gradient(120deg, var(--primary-500) 0%, var(--primary-150) 100%);
+
   // transition
   --transition-duration: 200ms;
   --transition-type: ease-in-out;

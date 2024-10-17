@@ -362,7 +362,6 @@ class GraphModal {
     this.modalContainer.classList.add(this.animation);
 
     setTimeout(() => {
-      document.querySelector('.header').classList.add('header-fixed', 'header--full')
       this.options.isOpen(this);
       this.modalContainer.classList.add('animate-open');
       this.isOpen = true;

@@ -154,6 +154,12 @@
 			left: 50%;
 			transform: translateX(-50%);
 		}
+
+		&-button {
+			--_width: 100%;
+			
+			max-width: 17.5rem;
+		}
 	}
 
 	&-picture {

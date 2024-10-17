@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    <!-- @include('partials/header.html') -->
+    <main class="main main-not-header">
+      <h1 class="visually-hidden">Страница 404</h1>
+      <div class="main-sections">
+        <section class="section promotion decoration-container">
+          <span class="decoration decoration-type-1 decoration-delay-4000 right-n120px top-40px"></span>
+          <span class="decoration decoration-type-3 left-n100px top-80px"></span>
+          <span class="decoration decoration-type-3 right-n200px bottom-n100px"></span>
+          <span class="decoration decoration-type-8 decoration-delay-4000 right-n20px top-160px"></span>
+          <span class="decoration decoration-type-3 left-n10px bottom-n300px"></span>
+
+          <div class="container">
+            <div class="page-header">
+              <div class="promotion-header">
+                <span class="promotion-header-text">
+                  Осталось немного до запуска
+                </span>
+              </div>
+            </div>
+
+            <div class="page-article page-article--md">
+              <div class="promotion-float">
+                <h2 class="page-article-title">
+                  Отличная новость для тебя!
+                </h2>
+                <p class="page-article-subtitle">
+                  Пока наши программисты трудятся над открытием продукта, мы для вас приготовили стартовый бонус
+                </p>
+                <div class="promotion-float-gift">
+                  <div class="promotion-float-gift-info">
+                    <p class="promotion-float-gift-suptitle">
+                      Подарок от нас
+                    </p>
+                    <h3 class="promotion-float-gift-title">
+                      1000₽
+                    </h3>
+                  </div>
+
+                  <div class="gift-container" style="background-image: url(./img/gifts/gift-bg.svg);">
+                    <div class="gift-body">
+                      <picture class="gift-picture">
+                        <source srcset="./img/gifts/gift-close.webp" type="image/webp">
+                        <img loading="lazy" src="./img/gifts/gift-close.png" class="gift-image" width="336" height="336"
+                          alt="Картинка">
+                      </picture>
+                      <picture class="gift-picture">
+                        <source srcset="./img/gifts/gift-open.webp" type="image/webp">
+                        <img loading="lazy" src="./img/gifts/gift-open.png" class="gift-image" width="336" height="336"
+                          alt="Картинка">
+                      </picture>
+                      <div class="gift-item">
+                        <h3 class="gift-item-title">
+                          VIP
+                          СТАТУС
+                        </h3>
+                        <p class="gift-item-hint">
+                          2 мес
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="gift-bottom">
+                  <button type="button" class="btn btn-xl btn-gradient">
+                    Забрать бонус
+                  </button>
+                </div>
+                <!-- START DEMO SCRIPT -->
+                  <!-- Чтобы анимации работали в правильной последовательность читаем ниже
+                  Последовательность добавления/удаления классов должна быть следующая:
+                  1. По клику на кнопку открытия подарка добавляем класс is-animated к .gift-body, а к первому gift-image добавляем класс shake-animated;
+                  2. Когда нужно закончить анимацию и открыть подарок => удаляем класс is-animated и shake-animated, и к .gift-body добавялем класс is-opened -->
+                <script>
+                  document.addEventListener('DOMContentLoaded', () => {
+                    const giftBody = document.querySelector('.gift-container .gift-body')
+                    const giftButton = document.querySelector('.gift-bottom .btn')
+    
+                    giftButton.addEventListener('click', () => {
+                      const giftPicture = giftBody.querySelector('.gift-picture .gift-image')
+    
+                      // Проверяем, открыт ли подарок (класс is-opened уже добавлен)
+                      if (giftBody.classList.contains('is-opened')) {
+                        // Убираем класс is-opened
+                        giftBody.classList.remove('is-opened')
+    
+                        // Ждём 1 секунду и снова запускаем анимацию
+                        setTimeout(() => {
+                          giftBody.classList.add('is-animated')
+                          giftPicture.classList.add('shake-animated')
+                          giftButton.setAttribute('disabled', '')
+    
+                          // Снимаем анимацию через 3 секунды и снова добавляем класс is-opened
+                          setTimeout(() => {
+                            giftBody.classList.remove('is-animated')
+                            giftPicture.classList.remove('shake-animated')
+                            giftBody.classList.add('is-opened')
+                            giftButton.removeAttribute('disabled')
+                          }, 3000)
+    
+                          setTimeout(() => {
+                            window.graphModal.open('modal-gift');
+                          }, 4000)
+                        }, 1000)
+                      } else {
+                        // Добавляем класс анимации при первом клике
+                        giftBody.classList.add('is-animated')
+                        giftPicture.classList.add('shake-animated')
+                        giftButton.setAttribute('disabled', '')
+    
+                        // Удаляем класс через 3 секунды и добавляем класс is-opened
+                        setTimeout(() => {
+                          giftBody.classList.remove('is-animated')
+                          giftPicture.classList.remove('shake-animated')
+                          giftBody.classList.add('is-opened')
+                          giftButton.removeAttribute('disabled')
+                        }, 3000)
+    
+                        setTimeout(() => {
+                            window.graphModal.open('modal-gift');
+                          }, 4000)
+                      }
+                    })
+                  })
+                </script>
+                <!-- END DEMO SCRIPT -->
+              </div>
+              
+              <div class="promotion-terms">
+                <div>
+                  <h4 class="promotion-terms-title">
+                    До старта проекта осталось:
+                  </h4>
+                  <p class="promotion-terms-timer">
+                    35д. 23ч. 40м. 12сек.
+                  </p>
+                </div>
+                <p class="promotion-terms-text">
+                  Присоединяйся к нашему сообществу, следи за новостями и будь одним и первых при страте, чтобы получить бонусы!
+                </p>
+                <a href="./404.html" target="_blank" class="btn btn-lg btn-gradient">
+                  <span class="icon">
+                    <svg>
+                      <use xlink:href="img/icons/telegram.svg#svg-telegram"></use>
+                    </svg>
+                  </span>
+                  Присоединиться
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      @include('partials/modals.html')
+    </main>
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>
