@@ -23,3 +23,14 @@ window.addEventListener('resize', () => {
 	getHeaderNavHeight()
 	updateHeaderUnionPosition()
 })
+
+const observer = new MutationObserver(() => {
+  updateHeaderUnionPosition()
+})
+
+headerNavLinks.forEach((link) => {
+  observer.observe(link, {
+    attributes: true,
+    attributeFilter: ['class']
+  })
+})
