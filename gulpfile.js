@@ -98,7 +98,16 @@ const styles = () => {
         message: "Error: <%= error.message %>"
       })
     ))
-    .pipe(mainSass())
+    .pipe(mainSass.sync({
+      quietDeps: true,
+      logger: {
+        warn: function(message) {
+          if (!message.includes('legacy-js-api')) {
+            console.warn(message);
+          }
+        }
+      }
+    }).on('error', mainSass.logError))
     .pipe(autoprefixer({
       cascade: false,
       grid: true,
@@ -120,7 +129,16 @@ const stylesBackend = () => {
         message: "Error: <%= error.message %>"
       })
     ))
-    .pipe(mainSass())
+    .pipe(mainSass.sync({
+      quietDeps: true,
+      logger: {
+        warn: function(message) {
+          if (!message.includes('legacy-js-api')) {
+            console.warn(message);
+          }
+        }
+      }
+    }).on('error', mainSass.logError))
     .pipe(autoprefixer({
       cascade: false,
       grid: true,
