@@ -1,8 +1,8 @@
 @use "./mixins/font-face" as fontFace;
 
-@include fontFace.font-face("Gilroy", "../fonts/GilroyRegular", 400, normal);
-@include fontFace.font-face("Gilroy", "../fonts/GilroyMedium", 500, normal);
-@include fontFace.font-face("Gilroy", "../fonts/GilroySemibold", 600, normal);
-@include fontFace.font-face("Gilroy", "../fonts/GilroyBold", 700, normal);
-@include fontFace.font-face("Gilroy", "../fonts/GilroyExtrabold", 800, normal);
-@include fontFace.font-face("Gilroy", "../fonts/GilroyBlack", 900, normal);
+@include fontFace.font-face("Gilroy", "GilroyRegular", 400, normal);
+@include fontFace.font-face("Gilroy", "GilroyMedium", 500, normal);
+@include fontFace.font-face("Gilroy", "GilroySemibold", 600, normal);
+@include fontFace.font-face("Gilroy", "GilroyBold", 700, normal);
+@include fontFace.font-face("Gilroy", "GilroyExtrabold", 800, normal);
+@include fontFace.font-face("Gilroy", "GilroyBlack", 900, normal);
